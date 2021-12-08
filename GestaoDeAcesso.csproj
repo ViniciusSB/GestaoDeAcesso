@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD96ECF5-99C3-494B-A114-D447BBDC81C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestaoDeAcesso</RootNamespace>
+    <AssemblyName>GestaoDeAcesso</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\wsCorreios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="controller\Controller.cs" />
+    <Compile Include="dao\CondominoDAO.cs" />
+    <Compile Include="dao\EnderecoDAO.cs" />
+    <Compile Include="dao\GestorDAO.cs" />
+    <Compile Include="dao\InsertDAO.cs" />
+    <Compile Include="dao\ConexaoDAO.cs" />
+    <Compile Include="dao\LoginDAO.cs" />
+    <Compile Include="dao\SelectDAO.cs" />
+    <Compile Include="dao\UpdateDAO.cs" />
+    <Compile Include="dao\VisitanteDAO.cs" />
+    <Compile Include="model\Automovel.cs" />
+    <Compile Include="model\EntradaSaidaModel.cs" />
+    <Compile Include="model\Condomino.cs" />
+    <Compile Include="model\Endereco.cs" />
+    <Compile Include="model\Pessoa.cs" />
+    <Compile Include="model\Usuario.cs" />
+    <Compile Include="model\Visitante.cs" />
+    <Compile Include="view\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Automoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Automoveis.Designer.cs">
+      <DependentUpon>Automoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroAutomovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroAutomovel.Designer.cs">
+      <DependentUpon>CadastroAutomovel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroEntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroEntradaSaida.Designer.cs">
+      <DependentUpon>CadastroEntradaSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroGestor.Designer.cs">
+      <DependentUpon>CadastroGestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroVisitante.Designer.cs">
+      <DependentUpon>CadastroVisitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Condominos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Condominos.Designer.cs">
+      <DependentUpon>Condominos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CadastroCondomino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CadastroCondomino.Designer.cs">
+      <DependentUpon>CadastroCondomino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EditarAutomovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EditarAutomovel.Designer.cs">
+      <DependentUpon>EditarAutomovel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EditarCondomino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EditarCondomino.Designer.cs">
+      <DependentUpon>EditarCondomino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EditarEntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EditarEntradaSaida.Designer.cs">
+      <DependentUpon>EditarEntradaSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EditarVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EditarVisitante.Designer.cs">
+      <DependentUpon>EditarVisitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EntradaSaida.Designer.cs">
+      <DependentUpon>EntradaSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Visitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Visitantes.Designer.cs">
+      <DependentUpon>Visitantes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Automoveis.resx">
+      <DependentUpon>Automoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroAutomovel.resx">
+      <DependentUpon>CadastroAutomovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroEntradaSaida.resx">
+      <DependentUpon>CadastroEntradaSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroGestor.resx">
+      <DependentUpon>CadastroGestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CadastroVisitante.resx">
+      <DependentUpon>CadastroVisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Condominos.resx">
+      <DependentUpon>Condominos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\CadastroCondomino.resx">
+      <DependentUpon>CadastroCondomino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EditarAutomovel.resx">
+      <DependentUpon>EditarAutomovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EditarCondomino.resx">
+      <DependentUpon>EditarCondomino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EditarEntradaSaida.resx">
+      <DependentUpon>EditarEntradaSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EditarVisitante.resx">
+      <DependentUpon>EditarVisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EntradaSaida.resx">
+      <DependentUpon>EntradaSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Visitantes.resx">
+      <DependentUpon>Visitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\wsCorreios\AtendeClienteService.wsdl" />
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.atualizaPagamentoNaEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.atualizaRemessaAgrupadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.bloquearObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaDataAtualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaOpcoesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaPagamentoEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaServicosAdicionaisAtivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaServicosValorDeclaradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaServicosXServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.buscaTarifaValeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.calculaTarifaServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.cancelarObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.cancelarPedidoScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.clienteERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.consultaCEPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.contratoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.dimensaoTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.enderecoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.fechaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.fechaPlpVariosServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.geraDigitoVerificadorEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.getStatusCartaoPostagemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.getStatusPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.integrarUsuarioScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.mensagemParametrizadaTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.obterClienteAtualizacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.obterEmbalagemLRSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.obterMensagemParametrizadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.pesquisarDimensoesServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.pesquisarEmbalagensPorServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.pesquisarParametrosPorDescricaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.pesquisarServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.retornoCancelamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.servicoAdicionalTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.servicoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.solicitaEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.solicitaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.solicitarPostagemScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.solicitaXmlPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.statusCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.statusPlp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.tipoEmbalagem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.valePostal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.validaEtiquetaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.validaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.validarPostagemReversaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.validarPostagemSimultaneaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.verificaDisponibilidadeServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.verificaModalTransporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\wsCorreios\GestaoDeAcesso.wsCorreios.VerificaSeTodosObjetosCanceladosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\wsCorreios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsCorreios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsCorreios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wsCorreios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
